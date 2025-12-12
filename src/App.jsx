@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import SearchBar from "./components/SearchBar";
 import MainWeather from "./components/MainWeather";
+import WeatherDetails from "./components/WeatherDetails";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,6 +13,7 @@ function App() {
       <SearchBar/>
       {/*  грид чтобы уложить все нормально*/}
       <MainWeather/>
+      <WeatherDetails/>
     </div>
   );
 }

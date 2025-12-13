@@ -7,11 +7,9 @@ import DailyForecast from "./components/DailyForecast";
 import HourlyForecast from "./components/HourlyForecast";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="bg-blue-800">
-      <h1 className="text-4xl font-bold text-white-600">How's the sky looking today?</h1>
+    <div className="bg-slate-950 text-white">
+      <h1 className="text-4xl font-bold text-center pt-[50px]">How's the sky looking today?</h1>
       <SearchBar/>
       {/*  грид чтобы уложить все нормально*/}
       <MainWeather/>

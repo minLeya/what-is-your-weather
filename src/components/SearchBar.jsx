@@ -2,7 +2,7 @@ import searchIcon from "../assets/images/icon-search.svg";
 
 function SearchBar() {
   return (
-    <div className="">
+    <div className="justify-center align-middle text-center">
       <div>
         <img 
           src={searchIcon} 

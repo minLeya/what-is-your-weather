@@ -1,18 +1,48 @@
 import searchIcon from "../assets/images/icon-search.svg";
+import { useState } from "react";
 
-function SearchBar() {
+function SearchBar({ onSearch }) {
+  const [query, setQuery] = useState("");
+
+  const handleSearch = () => {
+    if (query.trim()) {
+      onSearch?.(query.trim());
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  };
+
   return (
-    <div className="justify-center align-middle text-center">
-      <div>
+    <div className="flex items-center justify-center w-full max-w-md mx-auto gap-2 mb-10">
+      <div className="relative flex-1">
         <img 
           src={searchIcon} 
-          alt="Search" 
-          className=""
+          alt="Search icon" 
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none"
         />
-        <input type="text" placeholder="Search for a place..." className="" />
+        <input 
+          type="text" 
+          placeholder="Search for a place..." 
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyPress={handleKeyPress}
+          className="w-full pl-12 pr-4 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 rounded-xl focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 shadow-sm"
+          aria-label="Search for a location"
+        />
       </div>
 
-      <button className="">Search</button>
+      <button 
+        onClick={handleSearch}
+        disabled={!query.trim()}
+        className="px-6 py-3 bg-blue-800 hover:bg-blue-700 disabled:bg-gray-300 dark:disabled:bg-gray-700 text-white font-medium rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200 shadow-sm whitespace-nowrap"
+        aria-label="Search"
+      >
+        Search
+      </button>
     </div>
   );
 }

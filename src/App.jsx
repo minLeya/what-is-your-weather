@@ -8,8 +8,8 @@ import HourlyForecast from "./components/HourlyForecast";
 
 function App() {
   return (
-    <div className="bg-slate-950 text-white">
-      <h1 className="text-4xl font-bold text-center pt-[50px]">How's the sky looking today?</h1>
+    <div className="bg-slate-950 text-white font-[DMSans]">
+      <h1 className="text-4xl font-bold text-center p-[50px]">How's the sky looking today?</h1>
       <SearchBar/>
       {/*  грид чтобы уложить все нормально*/}
       <MainWeather/>

@@ -3,6 +3,8 @@ import "./App.css";
 import SearchBar from "./components/SearchBar";
 import MainWeather from "./components/MainWeather";
 import WeatherDetails from "./components/WeatherDetails";
+import DailyForecast from "./components/DailyForecast";
+import HourlyForecast from "./components/HourlyForecast";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +16,8 @@ function App() {
       {/*  грид чтобы уложить все нормально*/}
       <MainWeather/>
       <WeatherDetails/>
+      <HourlyForecast/>
+      <DailyForecast/>
     </div>
   );
 }

@@ -7,17 +7,21 @@ function MainWeather() {
         className="w-full h-auto"
       />
 
-      {/* positions */}
-      <div className="">
-        {" "}
-        {/* слева */}
-        <div>Belin, Germany</div>
-        <div>Thursday, Dec 11, 2025 </div>
+      <div className="absolute inset-0 pl-6 pt-[110px] flex flex-col gap-2">
+        <div className="text-2xl font-bold">Belin, Germany</div>
+        <div className="text-sm opacity-90">Thursday, Dec 11, 2025 </div>
       </div>
 
-      <div>
-        <img src="" alt="" /> {/* в зависимости от погоды... */}
-        68* {/* данные из сайта */}
+      <div className="flex flex-row items-center gap-4 absolute right-6 top-1/2 transform -translate-y-1/2">
+        <div>
+          <img
+            src="../src/assets/images/icon-snow.webp"
+            alt="snow"
+            className="w-16 h-16"
+          />
+        </div>
+
+        <div className="text-6xl font-bold italic">68*</div>
       </div>
     </div>
   );

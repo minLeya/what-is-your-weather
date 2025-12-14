@@ -9,13 +9,21 @@ import HourlyForecast from "./components/HourlyForecast";
 function App() {
   return (
     <div className="bg-slate-950 text-white font-[DMSans]">
-      <h1 className="text-4xl font-bold text-center p-[50px]">How's the sky looking today?</h1>
-      <SearchBar/>
-      {/*  грид чтобы уложить все нормально*/}
-      <MainWeather/>
-      <WeatherDetails/>
-      <HourlyForecast/>
-      <DailyForecast/>
+      <h1 className="text-5xl font-bold text-center p-[50px]">
+        How's the sky looking today?
+      </h1>
+      <SearchBar />
+
+      <div className="flex flex-row justify-center gap-8">
+        <div className="flex flex-col gap-5">
+          <MainWeather />
+          <WeatherDetails />
+          <DailyForecast />
+        </div>
+        <div>
+          <HourlyForecast />
+        </div>
+      </div>
     </div>
   );
 }

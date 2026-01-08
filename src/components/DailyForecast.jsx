@@ -1,7 +1,7 @@
 function DailyForecast() {
     return(
         <div className="text-white">
-            <div className="text-lg mb-2">Daily forecast</div>
+            <div className="text-lg mb-3 mt-4 font-medium">Daily forecast</div>
             <div className="w-[800px] h-[150] flex flex-row justify-between gap-4 box-border">
 
                 {/* make one repeated card */}

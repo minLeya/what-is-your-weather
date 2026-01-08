@@ -30,7 +30,7 @@ function SearchBar({ onSearch }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyPress={handleKeyPress}
-          className="w-full pl-12 pr-4 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 rounded-xl focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 shadow-sm"
+          className="w-full pl-12 pr-4 py-3 bg-[hsl(243,27%,20%)] rounded-xl text-white shadow-sm"
           aria-label="Search for a location"
         />
       </div>
@@ -38,7 +38,7 @@ function SearchBar({ onSearch }) {
       <button 
         onClick={handleSearch}
         disabled={!query.trim()}
-        className="px-6 py-3 bg-blue-800 hover:bg-blue-700 disabled:bg-gray-300 dark:disabled:bg-gray-700 text-white font-medium rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200 shadow-sm whitespace-nowrap"
+        className="mx-3 px-6 py-3 bg-[hsl(233,67%,56%)] text-white font-medium rounded-xl shadow-sm whitespace-nowrap"
         aria-label="Search"
       >
         Search

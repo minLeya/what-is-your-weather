@@ -5,7 +5,7 @@ function DailyForecast() {
             <div className="w-[800px] h-[150] flex flex-row justify-between gap-4 box-border">
 
                 {/* make one repeated card */}
-                <div className="bg-slate-800 border border-solid border-white/20 p-2.5 box-border rounded-lg flex flex-col justify-center text-center">
+                <div className="bg-[hsl(243,27%,20%)] border border-solid border-white/20 p-2.5 box-border rounded-lg flex flex-col justify-center text-center">
                     <div>Tue</div>
                     <div><img src="../src/assets/images/icon-sunny.webp" alt="sunny"/></div> 
                     <div className="flex flex-row justify-between">
@@ -15,7 +15,7 @@ function DailyForecast() {
                 </div>
 
 
-                <div className="bg-slate-800 border border-solid border-white/20 p-2.5 box-border rounded-lg flex flex-col justify-center text-center">
+                <div className="bg-[hsl(243,27%,20%)] border border-solid border-white/20 p-2.5 box-border rounded-lg flex flex-col justify-center text-center">
                     <div>Tue</div>
                     <div><img src="../src/assets/images/icon-sunny.webp" alt="sunny"/></div> 
                     <div className="flex flex-row justify-between">
@@ -24,7 +24,7 @@ function DailyForecast() {
                     </div>
                 </div>
 
-                <div className="bg-slate-800 border border-solid border-white/20 p-2.5 box-border rounded-lg flex flex-col justify-center text-center">
+                <div className="bg-[hsl(243,27%,20%)] border border-solid border-white/20 p-2.5 box-border rounded-lg flex flex-col justify-center text-center">
                     <div>Tue</div>
                     <div><img src="../src/assets/images/icon-sunny.webp" alt="sunny"/></div> 
                     <div className="flex flex-row justify-between">
@@ -33,7 +33,7 @@ function DailyForecast() {
                     </div>
                 </div>
                 
-                <div className="bg-slate-800 border border-solid border-white/20 p-2.5 box-border rounded-lg flex flex-col justify-center text-center">
+                <div className="bg-[hsl(243,27%,20%)] border border-solid border-white/20 p-2.5 box-border rounded-lg flex flex-col justify-center text-center">
                     <div>Tue</div>
                     <div><img src="../src/assets/images/icon-sunny.webp" alt="sunny"/></div> 
                     <div className="flex flex-row justify-between">
@@ -42,7 +42,7 @@ function DailyForecast() {
                     </div>
                 </div>
 
-                <div className="bg-slate-800 border border-solid border-white/20 p-2.5 box-border rounded-lg flex flex-col justify-center text-center">
+                <div className="bg-[hsl(243,27%,20%)] border border-solid border-white/20 p-2.5 box-border rounded-lg flex flex-col justify-center text-center">
                     <div>Tue</div>
                     <div><img src="../src/assets/images/icon-sunny.webp" alt="sunny"/></div> 
                     <div className="flex flex-row justify-between">
@@ -51,7 +51,7 @@ function DailyForecast() {
                     </div>
                 </div>
 
-                <div className="bg-slate-800 border border-solid border-white/20 p-2.5 box-border rounded-lg flex flex-col justify-center text-center">
+                <div className="bg-[hsl(243,27%,20%)] border border-solid border-white/20 p-2.5 box-border rounded-lg flex flex-col justify-center text-center">
                     <div>Tue</div>
                     <div><img src="../src/assets/images/icon-sunny.webp" alt="sunny"/></div> 
                     <div className="flex flex-row justify-between">
@@ -60,7 +60,7 @@ function DailyForecast() {
                     </div>
                 </div>
 
-                <div className="bg-slate-800 border border-solid border-white/20 p-2.5 box-border rounded-lg flex flex-col justify-center text-center">
+                <div className="bg-[hsl(243,27%,20%)] border border-solid border-white/20 p-2.5 box-border rounded-lg flex flex-col justify-center text-center">
                     <div>Tue</div>
                     <div><img src="../src/assets/images/icon-sunny.webp" alt="sunny"/></div> 
                     <div className="flex flex-row justify-between">

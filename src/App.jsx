@@ -31,7 +31,7 @@ function App() {
 
       <footer>
         <div className="text-center mt-10">
-          Coded by <a href="https://github.com/minLeya" className="text-[hsl(243,23%,30%)]">Leya</a>.
+          Coded by <a href="https://github.com/minLeya" className="text-[hsl(240,6%,70%)]">Leya</a>.
         </div>
       </footer>
     </div>

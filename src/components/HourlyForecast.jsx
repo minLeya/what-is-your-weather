@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { hourlyForecast } from "../mocks/hourlyForecast";
+import { weatherIcons } from "../utils/weatherIcons";
 
 function HourlyForecast() {
   const days = [
@@ -52,7 +54,7 @@ function HourlyForecast() {
           {/* сколько штук сколько часов от 12AM till 12PM */}
           <div className="flex flex-row items-center gap-2">
             <div className="w-8 h-8 flex items-center justify-center">
-              <img src="../src/assets/images/icon-sunny.webp" alt="sunny" />
+              <img src="../assets/images/weather-icon/icon-sunny.webp" alt="sunny" />
             </div>
 
             <div className="items-center">3 PM</div>

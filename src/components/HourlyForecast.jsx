@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { hourlyForecast } from "../mocks/hourlyForecast";
+import { hourlyForecastMock } from "../data/hourlyForecast";
 import { weatherIcons } from "../utils/weatherIcons";
 
 function HourlyForecast() {
@@ -16,18 +16,19 @@ function HourlyForecast() {
   const [selectedDay, setSelectedDay] = useState("Monday");
   const [isOpen, setIsOpen] = useState(false);
 
+  const hours = hourlyForecastMock[selectedDay] || [];
+
   return (
     <div className="w-[300px] bg-[hsl(243,27%,20%)] rounded-lg border border-solid border-white/20 box-border p-5 flex flex-col g-5 text-base">
-      {/* scroll */}
       <div className="flex flex-row justify-between items-center pb-5 pt-2 font-medium text-base">
         <div>Hourly forecast</div>
 
         <div className="relative">
           <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="px-3 py-1 rounded-md bg-[hsl(243,23%,24%)] border border-white/20 hover:bg-[hsl(243,23%,30%)]"
+            onClick={() => setIsOpen(!isOpen)}
+            className="px-3 py-1 rounded-md bg-[hsl(243,23%,24%)] border border-white/20 hover:bg-[hsl(243,23%,30%)]"
           >
-                {selectedDay} ▾
+            {selectedDay} ▾
           </button>
 
           {isOpen && (
@@ -49,123 +50,23 @@ function HourlyForecast() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-3">
-        <div className="bg-[hsl(243,23%,24%)] rounded-lg h-12 flex flex-row justify-between items-center px-3 border border-white/20">
-          {/* сколько штук сколько часов от 12AM till 12PM */}
-          <div className="flex flex-row items-center gap-2">
-            <div className="w-8 h-8 flex items-center justify-center">
-              <img src="../assets/images/weather-icon/icon-sunny.webp" alt="sunny" />
+      <div className="flex flex-col gap-3 h-[525px] overflow-y-auto pr-1 custom-scrollbar">
+        {hours.map((item, index) => (
+          <div
+            key={index}
+            className="bg-[hsl(243,23%,24%)] rounded-lg h-12 flex flex-row justify-between items-center px-3 border border-white/20"
+          >
+            <div className="flex flex-row items-center gap-2">
+              <div className="w-8 h-8 flex items-center justify-center">
+                <img src={weatherIcons[item.icon]} alt={item.icon} />
+              </div>
+
+              <div className="items-center">{item.hour}</div>
             </div>
 
-            <div className="items-center">3 PM</div>
+            <div>{item.temp}°</div>
           </div>
-
-          <div>68°</div>
-        </div>
-
-        <div className="bg-[hsl(243,23%,24%)] rounded-lg h-12 flex flex-row justify-between items-center px-3 border border-white/20">
-          {/* сколько штук сколько часов от 12AM till 12PM */}
-          <div className="flex flex-row items-center gap-2">
-            <div className="w-8 h-8 flex items-center justify-center">
-              <img src="../src/assets/images/icon-sunny.webp" alt="sunny" />
-            </div>
-
-            <div className="items-center">3 PM</div>
-          </div>
-
-          <div>68°</div>
-        </div>
-
-        <div className="bg-[hsl(243,23%,24%)] rounded-lg h-12 flex flex-row justify-between items-center px-3 border border-white/20">
-          {/* сколько штук сколько часов от 12AM till 12PM */}
-          <div className="flex flex-row items-center gap-2">
-            <div className="w-8 h-8 flex items-center justify-center">
-              <img src="../src/assets/images/icon-snow.webp" alt="snow" />
-            </div>
-
-            <div className="items-center">3 PM</div>
-          </div>
-
-          <div>68°</div>
-        </div>
-
-        <div className="bg-[hsl(243,23%,24%)] rounded-lg h-12 flex flex-row justify-between items-center px-3 border border-white/20">
-          {/* сколько штук сколько часов от 12AM till 12PM */}
-          <div className="flex flex-row items-center gap-2">
-            <div className="w-8 h-8 flex items-center justify-center">
-              <img src="../src/assets/images/icon-sunny.webp" alt="sunny" />
-            </div>
-
-            <div className="items-center">3 PM</div>
-          </div>
-
-          <div>68°</div>
-        </div>
-
-        <div className="bg-[hsl(243,23%,24%)] rounded-lg h-12 flex flex-row justify-between items-center px-3 border border-white/20">
-          {/* сколько штук сколько часов от 12AM till 12PM */}
-          <div className="flex flex-row items-center gap-2">
-            <div className="w-8 h-8 flex items-center justify-center">
-              <img src="../src/assets/images/icon-sunny.webp" alt="sunny" />
-            </div>
-
-            <div className="items-center">3 PM</div>
-          </div>
-
-          <div>68°</div>
-        </div>
-
-        <div className="bg-[hsl(243,23%,24%)] rounded-lg h-12 flex flex-row justify-between items-center px-3 border border-white/20">
-          {/* сколько штук сколько часов от 12AM till 12PM */}
-          <div className="flex flex-row items-center gap-2">
-            <div className="w-8 h-8 flex items-center justify-center">
-              <img src="../src/assets/images/icon-sunny.webp" alt="sunny" />
-            </div>
-
-            <div className="items-center">3 PM</div>
-          </div>
-
-          <div>68°</div>
-        </div>
-
-        <div className="bg-[hsl(243,23%,24%)] rounded-lg h-12 flex flex-row justify-between items-center px-3 border border-white/20">
-          {/* сколько штук сколько часов от 12AM till 12PM */}
-          <div className="flex flex-row items-center gap-2">
-            <div className="w-8 h-8 flex items-center justify-center">
-              <img src="../src/assets/images/icon-sunny.webp" alt="sunny" />
-            </div>
-
-            <div className="items-center">3 PM</div>
-          </div>
-
-          <div>68°</div>
-        </div>
-
-        <div className="bg-[hsl(243,23%,24%)] rounded-lg h-12 flex flex-row justify-between items-center px-3 border border-white/20">
-          {/* сколько штук сколько часов от 12AM till 12PM */}
-          <div className="flex flex-row items-center gap-2">
-            <div className="w-8 h-8 flex items-center justify-center">
-              <img src="../src/assets/images/icon-sunny.webp" alt="sunny" />
-            </div>
-
-            <div className="items-center">3 PM</div>
-          </div>
-
-          <div>68°</div>
-        </div>
-
-        <div className="bg-[hsl(243,23%,24%)] rounded-lg h-12 flex flex-row justify-between items-center px-3 border border-white/20">
-          {/* сколько штук сколько часов от 12AM till 12PM */}
-          <div className="flex flex-row items-center gap-2">
-            <div className="w-8 h-8 flex items-center justify-center">
-              <img src="../src/assets/images/icon-sunny.webp" alt="sunny" />
-            </div>
-
-            <div className="items-center">3 PM</div>
-          </div>
-
-          <div>68°</div>
-        </div>
+        ))}
       </div>
     </div>
   );

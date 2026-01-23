@@ -54,7 +54,7 @@ function HourlyForecast() {
         {hours.map((item, index) => (
           <div
             key={index}
-            className="bg-[hsl(243,23%,24%)] rounded-lg h-12 flex flex-row justify-between items-center px-3 border border-white/20"
+            className="bg-[hsl(243,23%,24%)] rounded-lg h-auto flex flex-row justify-between items-center px-3 py-3 border border-white/20"
           >
             <div className="flex flex-row items-center gap-2">
               <div className="w-8 h-8 flex items-center justify-center">

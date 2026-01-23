@@ -1,4 +1,4 @@
-import searchIcon from "../assets/images/icon-search.svg";
+import searchIcon from "/assets/images/icon-search.svg";
 import { useState } from "react";
 
 function SearchBar({ onSearch }) {

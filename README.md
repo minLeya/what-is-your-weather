@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution](https://www.frontendmentor.io/solutions/hey-whats-your-weather-in-react-_FzcZZV-hl)
+- Live Site URL: [Hey, what's your weather?](https://minleya.github.io/what-is-your-weather/)
 
 ## My process
 
@@ -50,7 +50,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - Grid
-- Tailwind
+- [Tailwind](https://tailwindcss.com/docs/installation/using-vite)
 - [React](https://reactjs.org/) - JS library
 
 
